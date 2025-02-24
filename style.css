@@ -8,192 +8,201 @@
 body {
     width: 100%;
     min-height: 100vh;
-    background-color: #1e1e1e;
-    color: #ffffff;
-    font-family: 'Arial', sans-serif;
+    background-color: rgb(7, 7, 7);
     display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-.container {
-    width: 90%;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #2a2a2a;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Header Section */
-header {
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
+    padding: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Logo */
+#logo {
+    width: 40%;
+    max-width: 150px;
     margin-bottom: 20px;
 }
 
-header .logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+/* Heading */
+h1 {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-size: 5vw;
     margin-bottom: 10px;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
+#name {
+    color: rgb(212, 43, 122);
+    font-size: 6vw;
 }
 
-header .highlight {
-    color: #ff6f61;
+#va {
+    color: rgb(43, 206, 212);
+    font-size: 6vw;
 }
 
-/* Voice Assistant Section */
-.voice-assistant {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.voice-animation img {
+/* Voice Animation */
+#voice {
     width: 80px;
     display: none;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
+/* Button */
 #btn {
-    background: linear-gradient(135deg, #ff6f61, #ffcc00);
-    padding: 15px 30px;
+    width: 80%;
+    max-width: 300px;
+    background: linear-gradient(to right, rgb(21, 145, 207), rgb(201, 41, 116));
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 18px;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 2px 2px 10px rgb(21, 145, 207), 2px 2px 10px rgb(201, 41, 116);
     border: none;
-    border-radius: 25px;
-    color: #ffffff;
-    font-size: 1rem;
+    transition: all 0.5s;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
 }
 
 #btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(255, 111, 97, 0.4);
+    box-shadow: 2px 2px 20px rgb(21, 145, 207), 2px 2px 20px rgb(201, 41, 116);
+    letter-spacing: 1px;
 }
 
-/* Transcription Section */
-.transcription {
-    margin-bottom: 20px;
+/* Icons Section */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-.transcription h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+.icon-container button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: none;
+    background: linear-gradient(to right, rgb(43, 206, 212), rgb(212, 43, 122));
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-#transcription-output {
-    background-color: #3a3a3a;
+.icon-container button img {
+    width: 22px;
+    height: 22px;
+}
+
+.icon-container button:hover {
+    opacity: 0.8;
+}
+
+/* Real-time Transcription Section */
+#transcription-section {
+    margin-top: 20px;
+    background: rgba(235, 121, 186, 0.1);
     padding: 15px;
     border-radius: 10px;
-    min-height: 100px;
+    width: 80%;
+    max-width: 600px;
 }
 
 #transcription-text {
-    font-size: 1rem;
-    color: #ffffff;
+    color: white;
+    font-size: 16px;
+    text-align: left;
 }
 
 /* Action Extraction Section */
-.action-extraction {
-    margin-bottom: 20px;
-}
-
-.action-extraction h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-#extracted-actions {
-    background-color: #3a3a3a;
+#action-extraction-section {
+    margin-top: 20px;
+    background: rgba(230, 108, 171, 0.1);
     padding: 15px;
     border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
 }
 
 #actions-list {
     list-style-type: none;
+    padding: 0;
+    color: white;
 }
 
 #actions-list li {
-    font-size: 1rem;
-    margin-bottom: 5px;
+    margin: 5px 0;
+    font-size: 14px;
 }
 
 /* Action Generation Section */
-.action-generation {
-    margin-bottom: 20px;
-}
-
-.action-generation h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.action-buttons {
+#action-generation-section {
+    margin-top: 20px;
     display: flex;
-    flex-wrap: wrap;
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.action-buttons button {
-    background: linear-gradient(135deg, #00bcd4, #4caf50);
-    padding: 10px 20px;
+#action-generation-section button {
+    background: linear-gradient(to right, rgb(43, 206, 212), rgb(212, 43, 122));
+    color: white;
     border: none;
-    border-radius: 25px;
-    color: #ffffff;
-    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 15px;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: 0.3s;
 }
 
-.action-buttons button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
+#action-generation-section button:hover {
+    opacity: 0.8;
 }
 
 /* Processing Status */
-.processing-status {
-    text-align: center;
-    margin-bottom: 20px;
+#processing-status {
+    margin-top: 20px;
+    color: white;
+    font-size: 14px;
 }
 
-#status-text {
-    font-size: 1rem;
-    color: #ff6f61;
-}
-
-/* Floating Notes Panel */
+/* Floating Notes */
 #floating-notes {
     position: fixed;
     bottom: 20px;
     right: 20px;
     width: 250px;
-    background-color: #3a3a3a;
+    background: white;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     display: none;
     flex-direction: column;
     z-index: 1000;
 }
 
-.notes-header {
+#notes-header {
     display: flex;
     justify-content: space-between;
-    background-color: #ff6f61;
+    background: #2bcece;
+    color: white;
     padding: 10px;
     border-radius: 10px 10px 0 0;
     cursor: grab;
 }
 
-.notes-header button {
+#notes-header button {
     background: transparent;
     border: none;
-    color: #ffffff;
-    font-size: 1.2rem;
+    color: white;
+    font-size: 18px;
     cursor: pointer;
 }
 
@@ -204,8 +213,6 @@ header .highlight {
     border: none;
     outline: none;
     resize: none;
-    font-size: 1rem;
-    background-color: #2a2a2a;
-    color: #ffffff;
+    font-size: 14px;
     border-radius: 0 0 10px 10px;
 }
