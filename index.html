@@ -1,71 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tany, Your Virtual Assistant</title>
     <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img src="logo.jpg" alt="logo" id="logo">
-    <h1>I'm <span id="name">Tany</span>, Your <span id="va">Virtual Assistant</span></h1>
-    <img src="voice.gif" alt="voice" id="voice">
-    
-    <button id="btn">
-        <img src="mic.svg" alt="mic">
-        <span id="content"> Click here to talk to me</span>
-    </button>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <img src="logo.jpg" alt="logo" class="logo">
+            <h1>I'm <span class="highlight">Tany</span>, Your <span class="highlight">Virtual Assistant</span></h1>
+        </header>
 
+        <!-- Main Content Section -->
+        <main>
+            <!-- Voice Assistant Section -->
+            <section class="voice-assistant">
+                <div class="voice-animation">
+                    <img src="voice.gif" alt="voice" id="voice">
+                </div>
+                <button id="btn">
+                    <img src="mic.svg" alt="mic">
+                    <span id="content">Click here to talk to me</span>
+                </button>
+            </section>
 
-    <!-- Real-time Transcription Section -->
-<section id="transcription-section">
-    <h2>Real-time Transcription</h2>
-    <div id="transcription-output">
-        <p id="transcription-text"></p>
-    </div>
-</section>
+            <!-- Real-time Transcription Section -->
+            <section class="transcription">
+                <h2>Real-time Transcription</h2>
+                <div id="transcription-output">
+                    <p id="transcription-text"></p>
+                </div>
+            </section>
 
-<!-- Action Extraction Section -->
-<section id="action-extraction-section">
-    <h2>Extracted Actions</h2>
-    <div id="extracted-actions">
-        <ul id="actions-list"></ul>
-    </div>
-</section>
+            <!-- Action Extraction Section -->
+            <section class="action-extraction">
+                <h2>Extracted Actions</h2>
+                <div id="extracted-actions">
+                    <ul id="actions-list"></ul>
+                </div>
+            </section>
 
-<!-- Action Generation Section -->
-<section id="action-generation-section">
-    <h2>Action Generation</h2>
-    <button id="create-calendar-event">Create Calendar Event</button>
-    <button id="create-todo">Create To-Do Item</button>
-    <button id="create-summary">Create Meeting Summary</button>
-    <button id="share-notes">Share Notes</button>
-</section>
+            <!-- Action Generation Section -->
+            <section class="action-generation">
+                <h2>Action Generation</h2>
+                <div class="action-buttons">
+                    <button id="create-calendar-event">Create Calendar Event</button>
+                    <button id="create-todo">Create To-Do Item</button>
+                    <button id="create-summary">Create Meeting Summary</button>
+                    <button id="share-notes">Share Notes</button>
+                </div>
+            </section>
 
-<div class="icon-container">
-    <button id="notes-btn">
-        <img src="notes.png" alt="notes"> Notes
-    </button>
-    
-</div>
-
-<!-- Processing Status -->
-<div id="processing-status">
-    <p id="status-text">Status: Idle</p>
-</div>
-
-    <!-- Floating Notes Panel -->
-    <div id="floating-notes">
-        <div id="notes-header">
-            <span>Notes</span>
-            <div>
-                <button id="minimize-notes">−</button>
-                <button id="close-notes">×</button>
+            <!-- Processing Status -->
+            <div class="processing-status">
+                <p id="status-text">Status: Idle</p>
             </div>
+        </main>
+
+        <!-- Floating Notes Panel -->
+        <div id="floating-notes">
+            <div class="notes-header">
+                <span>Notes</span>
+                <div>
+                    <button id="minimize-notes">−</button>
+                    <button id="close-notes">×</button>
+                </div>
+            </div>
+            <textarea id="notes-area" placeholder="Write your notes here..."></textarea>
         </div>
-        <textarea id="notes-area" placeholder="Write your notes here..."></textarea>
     </div>
 
     <script src="script.js"></script>
